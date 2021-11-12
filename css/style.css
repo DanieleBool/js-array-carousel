@@ -1,0 +1,80 @@
+/* commons */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    position: relative;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    width: 80vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.jumbo-cont{
+    position: relative;
+    width: 80%;
+    height: 100%;
+}
+
+.jumbo-cont img{
+    width: 100%;
+    /* height: 100%; */
+    /* object-fit: cover; */
+
+}
+
+.jumbo-cont .text{
+    color: white;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.carousel-cont{
+    /* display: flex; */
+    /* flex-direction: column; */
+    position: relative;
+    width: 20%;
+    /* z-index: -1; */
+    /* height: 400px; */
+    align-items: center;
+}
+
+.up{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.up .fa-chevron-up, .fa-chevron-down{
+padding: 5px;
+background: rgba(204,204,204,0.6);
+border-radius: 50%;
+}
+
+.carousel-img{
+    display: flex;
+    flex-direction: column;
+    /* overflow-y: scroll; */
+    height: calc(100% / 4);
+}
+
+.carousel-img img{
+    width: 100%;
+    filter: brightness(50%);
+    height: 100%;
+}
