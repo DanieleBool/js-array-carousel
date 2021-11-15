@@ -58,27 +58,54 @@ const down = document.querySelector(".down");
 
 // funzione con cui rimuovo l'active -> incremento di 1 il mio item -> aggiungo al prossimo l'active
 // la lunghezza di 'items' è 5 quindi, dato che parto da 0 e non da 1, in queso if devo decrementare -1 per interrompere
+
+// down.addEventListener("click", function(){
+//     if(activeItem < items.length - 1){
+//         item[activeItem].classList.remove("active");
+//         // oppure aggiungere activeItem++ sopra in quadra
+//         activeItem++;
+//         item[activeItem].classList.add("active");
+//     }
+// });
+
+
+
+
+// soluzione con LOOP
 down.addEventListener("click", function(){
-    if(activeItem < items.length - 1){
-        item[activeItem].classList.remove("active");
-        // oppure aggiungere activeItem++ sopra in quadra
-        activeItem++;
-        item[activeItem].classList.add("active");
+    item[activeItem].classList.remove("active");    
+    if(activeItem == items.length - 1){
+        activeItem = 0;
+    }else{
+        activeItem++;    
     }
+    item[activeItem].classList.add("active");   
+
 });
 
+// up.addEventListener("click", function(){
+//     if(activeItem > 0){
+//         // come sopra rimuovo l'active
+//         item[activeItem].classList.remove("active");
+//         // oppure aggiungere activeItem++ sopra in quadra
+//         // decremento
+//         activeItem--;
+//         // aggiungo l'active all'elemento decrementato (diversamente da Stopra)
+//         item[activeItem].classList.add("active");
+//     }
+// });
+
+// soluzione con LOOP
 up.addEventListener("click", function(){
-    if(activeItem > 0){
-        // come sopra rimuovo l'active
-        item[activeItem].classList.remove("active");
-        // oppure aggiungere activeItem++ sopra in quadra
-        // decremento
-        activeItem--;
-        // aggiungo l'active all'elemento decrementato (diversamente da Stopra)
-        item[activeItem].classList.add("active");
+    item[activeItem].classList.remove("active");
+    if(activeItem == 0){
+        activeItem = items.length -1;
+    }else{
+        activeItem--;    
     }
-});
+    item[activeItem].classList.add("active");   
 
+});
 
 // ARRAY 2
 
